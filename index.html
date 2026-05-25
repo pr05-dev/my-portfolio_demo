@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pranav | Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio website of Pranav, a 3rd year Computer Science Engineering student."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Sans+3:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="ripple-layer" id="rippleLayer" aria-hidden="true"></div>
+    <div class="cursor-trail" id="cursorTrail" aria-hidden="true"></div>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="#home">Pranav</a>
+        <nav class="site-nav">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#certifications">Certifications</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero section" id="home">
+          <div class="hero-copy">
+            <p class="eyebrow">CSE Student | 3rd Year</p>
+            <h1>Hi, I am Pranav.</h1>
+            <p class="hero-text">
+              I am a Computer Science Engineering student with a basic
+              understanding of programming, web development, and problem
+              solving. I am learning step by step and building my skills through
+              projects and practice.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#projects">View My Work</a>
+              <a class="button secondary" href="#certifications">See Certificates</a>
+            </div>
+          </div>
+          <aside class="hero-card">
+            <div class="profile-photo-wrap">
+              <img
+                class="profile-photo"
+                src="pranav-photo.jpeg"
+                alt="Portrait of Pranav"
+              />
+            </div>
+            <p class="card-label">Current Focus</p>
+            <ul>
+              <li>Building scalable backend and full-stack development skills</li>
+              <li>Exploring software engineering and modern web technologies</li>
+              <li>Passionate about problem solving, backend systems, and AI-assisted developer tools</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="section" id="about">
+          <div class="section-heading">
+            <p class="eyebrow">About Me</p>
+            <h2>Simple introduction</h2>
+          </div>
+          <div class="grid two-column">
+            <div class="panel">
+              <p>
+                My name is Pranav. I am studying Computer Science Engineering
+                and currently in my 3rd year. I have interest in software
+                development, websites, and learning new technologies.
+              </p>
+              <p>
+                I am comfortable with basic programming terminologies like data
+                structures, algorithms, frontend, backend, database, API, and
+                debugging. I am also working on improving communication and team
+                collaboration.
+              </p>
+            </div>
+            <div class="panel stats">
+              <div>
+                <span>Year</span>
+                <strong>3rd Year</strong>
+              </div>
+              <div>
+                <span>Branch</span>
+                <strong>CSE</strong>
+              </div>
+              <div>
+                <span>Level</span>
+                <strong>Basic to Intermediate</strong>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="skills">
+          <div class="section-heading">
+            <p class="eyebrow">Skills</p>
+            <h2>Basic terminologies and working knowledge</h2>
+          </div>
+          <div class="chips">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Python</span>
+            <span>Data Structures</span>
+            <span>OOP Concepts</span>
+            <span>DBMS</span>
+            <span>SQL</span>
+            <span>Git Basics</span>
+            <span>Problem Solving</span>
+          </div>
+        </section>
+
+        <section class="section" id="projects">
+          <div class="section-heading">
+            <p class="eyebrow">Projects</p>
+            <h2>Practice work and learning projects</h2>
+          </div>
+          <div class="grid project-grid">
+            <article class="panel project-card">
+              <h3>Student Portfolio Website</h3>
+              <p>
+                A personal portfolio website to showcase profile, skills,
+                projects, and contact details in a clean way.
+              </p>
+            </article>
+            <article class="panel project-card">
+              <h3>Codify App</h3>
+              <p>
+                A coding support app idea for beginners that aims to make the
+                learning journey easier through simple explanations, guided
+                practice, and a more friendly starting point for coding.
+              </p>
+            </article>
+            <article class="panel project-card">
+              <h3>Student Notes Organizer</h3>
+              <p>
+                A simple student-level project to organize subject notes,
+                important questions, and study material in one place for better
+                preparation and daily use.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="certifications">
+          <div class="section-heading">
+            <p class="eyebrow">Certifications</p>
+            <h2>Compact view with click to explore</h2>
+          </div>
+          <div class="grid cert-layout">
+            <div class="panel cert-intro">
+              <p>
+                I have combined my certificates into one file to keep the
+                portfolio clean. The section does not display every certificate
+                at once. Instead, visitors can open the certificate viewer and
+                check the full combined document when needed.
+              </p>
+              <div class="cert-meta">
+                <div>
+                  <span>Format</span>
+                  <strong>Combined PDF</strong>
+                </div>
+                <div>
+                  <span>Pages</span>
+                  <strong>3 Certificates</strong>
+                </div>
+              </div>
+              <div class="hero-actions">
+                <button class="button primary" id="openCertifications" type="button">
+                  Open Certifications
+                </button>
+                <a class="button secondary" href="certi-all.pdf" target="_blank" rel="noreferrer">
+                  Download PDF
+                </a>
+              </div>
+            </div>
+            <div class="panel cert-preview">
+              <h3>What this section does</h3>
+              <p>
+                The certificates are hidden by default for a cleaner portfolio
+                look. This adds a simple logic-based interaction: users choose
+                when they want to view the detailed certification proof.
+              </p>
+              <ul>
+                <li>Clean section on first look</li>
+                <li>Clickable viewer for full proof</li>
+                <li>Easy PDF download when required</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="education">
+          <div class="section-heading">
+            <p class="eyebrow">Education</p>
+            <h2>Academic background</h2>
+          </div>
+          <div class="panel timeline-item">
+            <h3>Bachelor of Technology in Computer Science Engineering</h3>
+            <p>
+              Currently pursuing 3rd year with interests in software
+              development, problem solving, backend development, and core
+              computer science concepts including DSA, DBMS, and OOP.
+            </p>
+          </div>
+        </section>
+
+        <section class="section" id="contact">
+          <div class="section-heading">
+            <p class="eyebrow">Contact</p>
+            <h2>Let us connect</h2>
+          </div>
+          <div class="grid two-column">
+            <div class="panel">
+              <p>
+                I am open to internships, learning opportunities, and beginner
+                level software projects.
+              </p>
+              <p>Email: pranav@example.com</p>
+              <p>Phone: +91 00000 00000</p>
+            </div>
+            <form class="panel contact-form" id="contactForm">
+              <label for="name">Your Name</label>
+              <input id="name" name="name" type="text" placeholder="Enter your name" required />
+
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="Write your message"
+                required
+              ></textarea>
+
+              <button class="button primary" type="submit">Send Message</button>
+              <p class="form-note" id="formNote"></p>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="modal hidden" id="certificationModal" aria-hidden="true">
+      <div class="modal-backdrop" data-close-modal="true"></div>
+      <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="certTitle">
+        <div class="modal-header">
+          <div>
+            <p class="eyebrow">Certificate Viewer</p>
+            <h3 id="certTitle">Pranav's Certifications</h3>
+          </div>
+          <button class="modal-close" id="closeCertifications" type="button" aria-label="Close">
+            ×
+          </button>
+        </div>
+        <div class="pdf-frame">
+          <iframe
+            src="certi-all.pdf"
+            title="Pranav certifications PDF"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
