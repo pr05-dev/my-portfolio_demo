@@ -3,11 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pranav | Portfolio</title>
+    <title>     Pranav MS  | Portfolio</title>
     <meta
       name="description"
-      content="Portfolio website of Pranav, a 3rd year Computer Science Engineering student."
-    />
+      content="Portfolio website of Pranav, a 4th year Computer Science Engineering student."/>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,7 +24,7 @@
         <nav class="site-nav">
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
+          <a href="#" onclick="openProjects(); return false;">Projects</a>
           <a href="#certifications">Certifications</a>
           <a href="#contact">Contact</a>
         </nav>
@@ -34,8 +33,8 @@
       <main>
         <section class="hero section" id="home">
           <div class="hero-copy">
-            <p class="eyebrow">CSE Student | 3rd Year</p>
-            <h1>Hi, I am Pranav.</h1>
+            <p class="eyebrow">CSE Student | 4th Year</p>
+            <h1>Hi, I am MS Pranav.</h1>
             <p class="hero-text">
               I am a Computer Science Engineering student with a basic
               understanding of programming, web development, and problem
@@ -73,20 +72,26 @@
             <div class="panel">
               <p>
                 My name is Pranav. I am studying Computer Science Engineering
-                and currently in my 3rd year. I have interest in software
+                and currently in my final year. I have interest in software
                 development, websites, and learning new technologies.
               </p>
               <p>
-                I am comfortable with basic programming terminologies like data
-                structures, algorithms, frontend, backend, database, API, and
-                debugging. I am also working on improving communication and team
-                collaboration.
+                I am a Computer Science student aiming for a Software Development Engineer
+                role. I enjoy solving problems with data structures and algorithms, and I
+                practice them regularly to write clean, efficient code. I have built
+                frontend projects like this portfolio and Codify.
+                </p>
+              <p>
+                I am learning backend development, databases, and APIs so I can understand software from end to
+                end. I use Git and GitHub for version control and Netlify for deployment. I
+                am working on improving my system design basics and team collaboration as I
+                grow toward building scalable software.
               </p>
             </div>
             <div class="panel stats">
               <div>
                 <span>Year</span>
-                <strong>3rd Year</strong>
+                <strong> 4th Year</strong>
               </div>
               <div>
                 <span>Branch</span>
@@ -109,13 +114,19 @@
             <span>HTML</span>
             <span>CSS</span>
             <span>JavaScript</span>
-            <span>Python</span>
-            <span>Data Structures</span>
-            <span>OOP Concepts</span>
-            <span>DBMS</span>
-            <span>SQL</span>
+            <span> Java </span>
+            <span> Python </span>
+            <span> DSA </span>
+            <span> OOP Concepts </span>
+            <span> DBMS </span>
+            <span> Computer Networks </span>
+            <span> AI Tools </span>
+            <span> SQL </span>
+            <span> Springboot </span>
+            <span> API </span>
+            <span> Postman </span>
+            <span> Firebase Authentication </span>
             <span>Git Basics</span>
-            <span>Problem Solving</span>
           </div>
         </section>
 
@@ -128,24 +139,23 @@
             <article class="panel project-card">
               <h3>Student Portfolio Website</h3>
               <p>
-                A personal portfolio website to showcase profile, skills,
-                projects, and contact details in a clean way.
-              </p>
+                Developed a personal portfolio website to showcase my profile, technical skills, projects, and achievements in a centralized platform. The website highlights my technical background and provides recruiters with an overview of my work.
+                </p>
             </article>
             <article class="panel project-card">
-              <h3>Codify App</h3>
+              <img src="codify-logo.png" alt="Codify logo" onclick="pmOpen('codify')" style="width:220px; cursor:pointer; display:block; margin:0 auto 12px;">
               <p>
                 A coding support app idea for beginners that aims to make the
-                learning journey easier through simple explanations, guided
-                practice, and a more friendly starting point for coding.
+                 learning journey easier through simple explanations, guided
+                   practice, and a more friendly starting point for coding.
               </p>
             </article>
             <article class="panel project-card">
-              <h3>Student Notes Organizer</h3>
+              <img src="decision-journal.png" alt="Decision Journal logo" onclick="pmOpen('decision')" style="width:130px; cursor:pointer; display:block; margin:0 auto 12px;">
               <p>
                 A simple student-level project to organize subject notes,
-                important questions, and study material in one place for better
-                preparation and daily use.
+                important questions, and study material in one place for
+                 better preparation , daily use and Track your progress
               </p>
             </article>
           </div>
@@ -207,9 +217,10 @@
           <div class="panel timeline-item">
             <h3>Bachelor of Technology in Computer Science Engineering</h3>
             <p>
-              Currently pursuing 3rd year with interests in software
+              Currently pursuing Final year with interests in software
               development, problem solving, backend development, and core
-              computer science concepts including DSA, DBMS, and OOP.
+              computer science concepts.including keen interst in AI tools
+              languages.
             </p>
           </div>
         </section>
@@ -222,8 +233,8 @@
           <div class="grid two-column">
             <div class="panel">
               <p>
-                I am open to internships, learning opportunities, and beginner
-                level software projects.
+                Open to SDE internships, entry-level roles, and software projects where I can
+                apply my problem-solving skills and keep learning.
               </p>
               <p>Email: pranav@example.com</p>
               <p>Phone: +91 00000 00000</p>
@@ -270,6 +281,434 @@
         </div>
       </div>
     </div>
+
+    <style>
+      .pm-overlay{display:none;position:fixed;inset:0;background:rgba(5,5,10,.75);backdrop-filter:blur(6px);z-index:9999;align-items:center;justify-content:center;}
+      .pm-overlay.show{display:flex;animation:pmFade .3s ease;}
+      @keyframes pmFade{from{opacity:0}to{opacity:1}}
+
+      .pm-box{position:relative;background:#0d0d12;border:2px solid #ffd700;border-radius:18px;padding:28px 24px;width:min(90%,400px);text-align:center;color:#fff;font-family:sans-serif;box-shadow:0 0 18px rgba(255,215,0,.6),0 0 60px rgba(255,215,0,.25),inset 0 0 18px rgba(255,215,0,.15);animation:pmPop .35s cubic-bezier(.2,1.4,.4,1);}
+      @keyframes pmPop{from{transform:scale(.6);opacity:0}to{transform:scale(1);opacity:1}}
+
+      .pm-box h3{margin:0 0 10px;color:#ffd700;text-shadow:0 0 10px rgba(255,215,0,.7);letter-spacing:1px;}
+
+      /* Stage: the area where bubbles float */
+
+      .pm-bubbles{position:relative;width:100%;height:240px;overflow:hidden;}
+
+      /* Each bubble */
+
+      .pm-bubble{position:absolute;width:120px;height:120px;border-radius:50%;border:1.5px solid rgba(255,255,255,.75);background:radial-gradient(circle at 30% 25%,rgba(255,255,255,.28),rgba(255,255,255,.05) 60%,rgba(255,215,0,.08));color:#fff;font-size:16px;font-weight:bold;letter-spacing:1px;cursor:pointer;text-shadow:0 0 8px rgba(255,255,255,.6);box-shadow:0 0 16px rgba(255,215,0,.45),inset 0 0 14px rgba(255,255,255,.15);animation:pmDrift 12s ease-in-out infinite;transition:box-shadow .2s;}
+      .pm-bubble:hover{box-shadow:0 0 26px rgba(255,215,0,.9),0 0 50px rgba(255,215,0,.35),inset 0 0 14px rgba(255,255,255,.25);animation-play-state:paused;}
+
+      /* Position the bubbles inside the stage */
+      .pm-bubble:nth-child(1){left:10px;top:20px;}
+      .pm-bubble:nth-child(2){left:200px;top:100px;animation-duration:14s;animation-delay:-4s;}
+
+      /* Slow drifting motion */
+
+      @keyframes pmDrift{
+        0%{transform:translate(0,0)}
+        25%{transform:translate(22px,-14px)}
+        50%{transform:translate(-12px,12px)}
+        75%{transform:translate(16px,16px)}
+        100%{transform:translate(0,0)}
+      }
+      .pm-bubble.launch{animation:pmLaunch .6s ease-in forwards;}
+      @keyframes pmLaunch{0%{transform:scale(1);opacity:1}100%{transform:scale(2.2);opacity:0}}
+
+      .pm-note{color:#ffd700;opacity:.85;font-size:14px;margin:18px 0 0;min-height:20px;}
+      .pm-close{margin-top:22px;background:transparent;border:1px solid #ffd700;color:#ffd700;padding:8px 18px;border-radius:20px;cursor:pointer;box-shadow:0 0 10px rgba(255,215,0,.4);}
+      .pm-close:hover{box-shadow:0 0 18px rgba(255,215,0,.8);}
+
+
+
+      /* ===== Floating bubbles (Repo / Demo) ===== */
+      .fb-stage{position:relative;width:100%;height:clamp(200px,34vh,280px);margin-top:6px;overflow:hidden;border-radius:14px;}
+      .fb-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;}
+      .fb-bubble{--glow:0;position:absolute;left:0;top:0;border-radius:50%;cursor:pointer;z-index:1;will-change:transform;outline:none;touch-action:manipulation;-webkit-tap-highlight-color:transparent;}
+      .fb-face{position:relative;display:flex;align-items:center;justify-content:center;width:100%;height:100%;box-sizing:border-box;border-radius:50%;padding:0 14px;color:#fff;font:600 16px/1.2 sans-serif;letter-spacing:.5px;white-space:nowrap;user-select:none;text-shadow:0 1px 4px rgba(0,0,0,.6);background-image:radial-gradient(circle at 50% 50%,rgba(255,255,255,.05),transparent 70%),radial-gradient(rgba(255,255,255,.09) 1px,transparent 1px),linear-gradient(145deg,rgba(255,255,255,.30),rgba(255,255,255,.06) 55%,rgba(255,215,0,.12));background-size:auto,6px 6px,auto;-webkit-backdrop-filter:blur(8px) saturate(140%);backdrop-filter:blur(8px) saturate(140%);border:1px solid rgba(255,255,255,.45);box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 -12px 22px rgba(255,215,0,.12),0 10px 22px rgba(0,0,0,.55);transition:transform .2s ease,filter .2s ease,opacity .2s ease;}
+      .fb-face::before{content:"";position:absolute;top:9%;left:16%;width:44%;height:22%;border-radius:50%;background:linear-gradient(180deg,rgba(255,255,255,.75),rgba(255,255,255,0));transform:rotate(-18deg);pointer-events:none;}
+      .fb-face::after{content:"";position:absolute;inset:-6px;border-radius:50%;box-shadow:0 0 22px 4px rgba(255,215,0,.85);opacity:var(--glow);pointer-events:none;}
+      .fb-bubble.is-hover .fb-face{transform:scale(1.08);filter:brightness(1.25);}
+      .fb-bubble.popping .fb-face{transform:scale(1.3);opacity:0;}
+      .fb-bubble:focus-visible .fb-face{outline:2px solid #ffd700;outline-offset:3px;}
+      @media (prefers-reduced-motion: reduce){.fb-face{transition:none;}}
+
+
+    </style>
+
+    <!-- Popup 1: list of projects -->
+    <div id="pm-projects" class="pm-overlay" onclick="pmClose(event, this)">
+      <div class="pm-box">
+        <h3>My Projects</h3>
+        <button class="pm-item" onclick="pmOpen('codify')">Codify</button>
+        <button class="pm-item" onclick="pmOpen('decision')">Decision Journal</button>
+        <button class="pm-close" onclick="pmHide('pm-projects')">Close</button>
+      </div>
+    </div>
+
+    <!-- Popup 2: options for the chosen project -->
+    <div id="pm-options" class="pm-overlay" onclick="pmClose(event, this)">
+      <div class="pm-box">
+        <h3 id="pm-title"></h3>
+        <div class="fb-stage" id="fb-stage"></div>
+        <p class="pm-note" id="pm-status"></p>
+        <button class="pm-close" onclick="pmHide('pm-options')">Close</button>
+      </div>
+    </div>
+      <div class="pm-box">
+        <h3 id="pm-title"></h3>
+        <div id="pm-links"></div>
+        <button class="pm-close" onclick="pmHide('pm-options')">Close</button>
+      </div>
+    </div>
+
+    <script>
+      const PM_PROJECTS = {
+        codify: {
+          name: "Codify",
+          demo: "https://codify-s.netlify.app/",
+          github: "https://github.com/pr05-dev/Codify1"
+        },
+        decision: {
+          name: "Decision Journal",
+          demo: null,
+          github: null
+        }
+      };
+
+      const PM_REDUCED = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const PM_CAN_MAGNET = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+      const pmRand = (a, b) => a + Math.random() * (b - a);
+      let pmFloat = null;
+
+      function openProjects(){ pmShow("pm-projects"); }
+      function pmShow(id){ document.getElementById(id).classList.add("show"); }
+      function pmHide(id){
+        document.getElementById(id).classList.remove("show");
+        if(id === "pm-options") pmStopFloat();
+      }
+      function pmClose(e, el){ if(e.target === el) pmHide(el.id); }
+
+      function pmOpen(key){
+        pmHide("pm-projects");
+        pmStopFloat();
+        const p = PM_PROJECTS[key];
+        const title = document.getElementById("pm-title");
+        const status = document.getElementById("pm-status");
+        const stage = document.getElementById("fb-stage");
+
+        title.textContent = p.name;
+        status.textContent = "";
+
+        const links = [];
+        if(p.github) links.push({ label: "GitHub Repo", url: p.github });
+        if(p.demo)   links.push({ label: "Demo", url: p.demo });
+
+        pmShow("pm-options");
+
+        if(links.length === 0){
+          stage.style.display = "none";
+          status.textContent = "This will be updated soon.";
+          return;
+        }
+        stage.style.display = "block";
+        pmStartFloat(stage, status, links);
+      }
+
+      function pmStopFloat(){
+        if(pmFloat){ pmFloat.stop(); pmFloat = null; }
+      }
+
+      function pmStartFloat(stage, status, links){
+        const measure = document.createElement("canvas").getContext("2d");
+        measure.font = "600 16px sans-serif";
+
+        const canvas = document.createElement("canvas");
+        canvas.className = "fb-canvas";
+        stage.innerHTML = "";
+        stage.appendChild(canvas);
+        const ctx = canvas.getContext("2d");
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+        let W = stage.clientWidth;
+        let H = stage.clientHeight;
+        let raf = 0, lastT = 0, navTimer = 0;
+        let pointer = null;
+        const particles = [];
+
+        const setCanvasSize = () => {
+          canvas.width = Math.round(W * dpr);
+          canvas.height = Math.round(H * dpr);
+        };
+        setCanvasSize();
+
+        // Build bubbles sized to their text
+        const bubbles = links.map(link => {
+          const textW = measure.measureText(link.label).width;
+          const d = Math.min(
+                  Math.max(120, Math.ceil(textW + 56)),
+                  Math.floor(Math.min(W, H) * 0.9)
+          );
+          const el = document.createElement("div");
+          el.className = "fb-bubble";
+          el.setAttribute("role", "button");
+          el.setAttribute("tabindex", "0");
+          el.setAttribute("aria-label", "Open " + link.label);
+          el.style.width = d + "px";
+          el.style.height = d + "px";
+          const face = document.createElement("span");
+          face.className = "fb-face";
+          face.textContent = link.label;
+          el.appendChild(face);
+          stage.appendChild(el);
+          return {
+            el, label: link.label, url: link.url, r: d / 2,
+            x: 0, y: 0, vx: 0, vy: 0,
+            wander: pmRand(0, Math.PI * 2), trailT: 0,
+            popped: false, glow: "0"
+          };
+        });
+
+        const placeAll = () => {
+          bubbles.forEach((b, i) => {
+            let x = 0, y = 0;
+            for(let t = 0; t < 80; t++){
+              x = pmRand(b.r, Math.max(b.r, W - b.r));
+              y = pmRand(b.r, Math.max(b.r, H - b.r));
+              const ok = bubbles.slice(0, i).every(o => Math.hypot(o.x - x, o.y - y) >= o.r + b.r);
+              if(ok) break;
+            }
+            b.x = x;
+            b.y = y;
+            const a = pmRand(0, Math.PI * 2);
+            const s = pmRand(40, 70);
+            b.vx = Math.cos(a) * s;
+            b.vy = Math.sin(a) * s;
+          });
+        };
+
+        const clampAll = () => bubbles.forEach(b => {
+          b.x = Math.min(Math.max(b.x, b.r), W - b.r);
+          b.y = Math.min(Math.max(b.y, b.r), H - b.r);
+        });
+
+        const render = () => bubbles.forEach(b => {
+          b.el.style.transform = `translate3d(${(b.x - b.r).toFixed(1)}px, ${(b.y - b.r).toFixed(1)}px, 0)`;
+        });
+
+        const burst = (x, y) => {
+          if(PM_REDUCED) return;
+          for(let i = 0; i < 14; i++){
+            const a = pmRand(0, Math.PI * 2);
+            const s = pmRand(90, 200);
+            particles.push({
+              x, y, vx: Math.cos(a) * s, vy: Math.sin(a) * s,
+              life: 0, max: pmRand(0.35, 0.55), size: pmRand(1.5, 3),
+              alpha: 0.9, rgb: i % 3 === 0 ? "255,255,255" : "255,215,0"
+            });
+          }
+        };
+
+        const pop = b => {
+          if(b.popped) return;
+          b.popped = true;
+          b.el.classList.add("popping");
+          burst(b.x, b.y);
+          status.textContent = "Opening " + b.label + "...";
+          navTimer = window.setTimeout(() => {
+            window.location.href = b.url;
+          }, PM_REDUCED ? 120 : 230);
+        };
+
+        // Pointer handling (magnet tracking, hover, and clicks)
+        const onMove = e => {
+          if(!PM_CAN_MAGNET || e.pointerType !== "mouse") return;
+          const rect = stage.getBoundingClientRect();
+          pointer = { x: e.clientX - rect.left, y: e.clientY - rect.top };
+        };
+        const onLeave = () => { pointer = null; };
+        stage.addEventListener("pointermove", onMove);
+        stage.addEventListener("pointerleave", onLeave);
+
+        bubbles.forEach(b => {
+          b.el.addEventListener("pointerenter", () => b.el.classList.add("is-hover"));
+          b.el.addEventListener("pointerleave", () => b.el.classList.remove("is-hover"));
+          b.el.addEventListener("click", () => pop(b));
+          b.el.addEventListener("keydown", e => {
+            if(e.key === "Enter" || e.key === " "){
+              e.preventDefault();
+              pop(b);
+            }
+          });
+        });
+
+        const update = dt => {
+          // Movement, wandering, and magnet
+          bubbles.forEach(b => {
+            if(b.popped) return;
+
+            b.wander += pmRand(-0.8, 0.8) * dt;
+            b.vx += Math.cos(b.wander) * 12 * dt;
+            b.vy += Math.sin(b.wander) * 12 * dt;
+
+            if(pointer){
+              const dx = pointer.x - b.x, dy = pointer.y - b.y;
+              const d = Math.hypot(dx, dy);
+              if(d > b.r * 0.5 && d < 160){
+                const pull = (1 - d / 160) * 90;
+                b.vx += (dx / d) * pull * dt;
+                b.vy += (dy / d) * pull * dt;
+              }
+            }
+
+            let sp = Math.hypot(b.vx, b.vy);
+            if(sp > 85){
+              b.vx *= 85 / sp;
+              b.vy *= 85 / sp;
+              sp = 85;
+            } else if(sp < 30){
+              if(sp < 0.01){
+                b.vx = 30;
+                b.vy = 0;
+              } else {
+                b.vx *= 30 / sp;
+                b.vy *= 30 / sp;
+              }
+              sp = 30;
+            }
+
+            b.x += b.vx * dt;
+            b.y += b.vy * dt;
+          });
+
+          // Bubble-to-bubble collisions (no popping, just bounce apart)
+          for(let i = 0; i < bubbles.length; i++){
+            for(let j = i + 1; j < bubbles.length; j++){
+              const a = bubbles[i], c = bubbles[j];
+              if(a.popped || c.popped) continue;
+              const dx = c.x - a.x, dy = c.y - a.y;
+              const dist = Math.hypot(dx, dy);
+              const min = a.r + c.r;
+              if(dist < min && dist > 0.001){
+                const nx = dx / dist, ny = dy / dist;
+                const push = (min - dist) / 2;
+                a.x -= nx * push; a.y -= ny * push;
+                c.x += nx * push; c.y += ny * push;
+                const rv = (c.vx - a.vx) * nx + (c.vy - a.vy) * ny;
+                if(rv < 0){
+                  const imp = -(1 + 0.95) * rv / 2;
+                  a.vx -= imp * nx; a.vy -= imp * ny;
+                  c.vx += imp * nx; c.vy += imp * ny;
+                }
+              }
+            }
+          }
+
+          // Walls, edge glow, and trail
+          bubbles.forEach(b => {
+            if(b.popped) return;
+
+            if(b.x - b.r < 0){ b.x = b.r; b.vx = Math.abs(b.vx) * 0.9; }
+            if(b.x + b.r > W){ b.x = W - b.r; b.vx = -Math.abs(b.vx) * 0.9; }
+            if(b.y - b.r < 0){ b.y = b.r; b.vy = Math.abs(b.vy) * 0.9; }
+            if(b.y + b.r > H){ b.y = H - b.r; b.vy = -Math.abs(b.vy) * 0.9; }
+
+            const edge = Math.min(b.x - b.r, W - b.x - b.r, b.y - b.r, H - b.y - b.r);
+            const g = Math.max(0, Math.min(1, 1 - edge / 45)).toFixed(2);
+            if(g !== b.glow){
+              b.glow = g;
+              b.el.style.setProperty("--glow", g);
+            }
+
+            b.trailT += dt;
+            const sp = Math.hypot(b.vx, b.vy);
+            if(b.trailT > 0.08 && sp > 20){
+              b.trailT = 0;
+              const ux = b.vx / sp, uy = b.vy / sp;
+              particles.push({
+                x: b.x - ux * b.r * 0.9,
+                y: b.y - uy * b.r * 0.9,
+                vx: -ux * 14 + pmRand(-6, 6),
+                vy: -uy * 14 + pmRand(-6, 6),
+                life: 0, max: pmRand(0.45, 0.6), size: pmRand(1.2, 2.2),
+                alpha: 0.35, rgb: "255,215,0"
+              });
+            }
+          });
+
+          // Particles
+          for(let i = particles.length - 1; i >= 0; i--){
+            const p = particles[i];
+            p.life += dt;
+            if(p.life >= p.max){
+              particles.splice(i, 1);
+              continue;
+            }
+            p.x += p.vx * dt;
+            p.y += p.vy * dt;
+            const damp = Math.exp(-3 * dt);
+            p.vx *= damp;
+            p.vy *= damp;
+          }
+          if(particles.length > 150) particles.splice(0, particles.length - 150);
+        };
+
+        const draw = () => {
+          ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+          ctx.clearRect(0, 0, W, H);
+          particles.forEach(p => {
+            const t = 1 - p.life / p.max;
+            ctx.fillStyle = `rgba(${p.rgb},${(t * p.alpha).toFixed(3)})`;
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.size * (0.5 + 0.5 * t), 0, Math.PI * 2);
+            ctx.fill();
+          });
+        };
+
+        const frame = now => {
+          const dt = lastT ? Math.min(0.034, (now - lastT) / 1000) : 0.016;
+          lastT = now;
+          update(dt);
+          render();
+          draw();
+          raf = requestAnimationFrame(frame);
+        };
+
+        // Keep bubbles inside the stage when the popup resizes
+        const onResize = () => {
+          const nW = stage.clientWidth, nH = stage.clientHeight;
+          if(!nW || !nH) return;
+          W = nW;
+          H = nH;
+          setCanvasSize();
+          clampAll();
+          render();
+        };
+        const ro = new ResizeObserver(onResize);
+        ro.observe(stage);
+
+        placeAll();
+        render();
+        if(!PM_REDUCED){
+          raf = requestAnimationFrame(frame);
+        } else {
+          draw();
+        }
+
+        const stop = () => {
+          cancelAnimationFrame(raf);
+          clearTimeout(navTimer);
+          ro.disconnect();
+          stage.removeEventListener("pointermove", onMove);
+          stage.removeEventListener("pointerleave", onLeave);
+          particles.length = 0;
+          stage.innerHTML = "";
+        };
+        pmFloat = { stop };
+      }
+    </script>
 
     <script src="script.js"></script>
   </body>
